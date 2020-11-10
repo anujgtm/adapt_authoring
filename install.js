@@ -74,7 +74,7 @@ installHelpers.checkPrimaryDependencies(function(error) {
           name: 'authoringToolRepository',
           type: 'input',
           message: 'Git repository URL to be used for the authoring tool source code',
-          default: 'https://github.com/adaptlearning/adapt_authoring.git'
+          default: 'https://github.com/anujgtm/adapt_authoring.git'
         },
         {
           name: 'frameworkRepository',
