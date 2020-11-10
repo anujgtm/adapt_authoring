@@ -17,6 +17,7 @@ server.get('/', async function (req, res, next) {
   const isProduction = configuration.getConfig('isProduction');
   const useAnalytics = configuration.getConfig('useAnalytics') || false;
   const trackingId = configuration.getConfig('trackingId') || 'UA-XXXXX-Y';
+  const clientCss = configuration.getConfig('dbName');
   const versions = await getVersions();
 
   res.render('index', Object.assign({
@@ -25,7 +26,8 @@ server.get('/', async function (req, res, next) {
     loading: app.polyglot.t('app.loading'),
     productName: app.polyglot.t('app.productname'),
     useAnalytics: useAnalytics,
-    trackingId: trackingId
+    trackingId: trackingId,
+    clientCss: clientCss
   }, versions));
 });
 
